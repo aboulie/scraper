@@ -32,13 +32,22 @@ Deployed on: `Heroku`
 
 ## Usage
 
-- Click on the "Scrape Articles" icon at the upper right hand Corner to Scrape News Articles from MPR News.
+- Fork repo and clone to your computer. Make sure node.js and mongodb are installed on your system.
+
+- At the command line, navigate to Scraper folder and run npm install.
+
+- Run node server.js in the terminal. The console should log the port number the app will be on (currently 3000).
+
+- Go to your browser and type http://localhost:3000/ into the address bar to bring up the app.
+
+- Click  the "Scrape Articles" button at the upper right hand corner to Scrape News Articles from MPR News.
 
 - Click on "Save Article" on the individual articles to store the article in MongoDB.
 
 - Click on "Saved Articles" to bring up a List of Saved Articles.
 
 - Click on Artical Notes to elicit a pop up modal which will allow you to see, add, and delete notes. 
+
 - Click on the "Delete from Saved" Button to delete the article from your list.
 
 
