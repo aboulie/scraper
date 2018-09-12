@@ -1,0 +1,62 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="blue-text display text-center white display-1">Saved Articles</h1>
+    </div>
+</div>
+
+<div class="articles container-fluid padded">
+    {{#each articles}}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8">
+                             <a href="{{link}}"><h4 class="title align-middle white">{{title}}</h4></a>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <button class="btn btn-sm btn-danger delete-btn align-middle" id="{{_id}}">Delete from Saved</button>
+                            <button class="btn btn-sm btn-primary notes-btn align-middle" data-toggle="modal" data-target="#notesModal" data-id="{{_id}}" id="modalLaunchbn">Article Notes</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>{{body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {{/each}}
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="notesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notes for this article</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="notes">
+            <p id="noteDisplay"></p>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Write a new note</label>
+                <textarea class="form-control" id="newNote" rows="3"></textarea>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveNote" data-id="">Save note</button>
+      </div>
+    </div>
+  </div>
+</div>
